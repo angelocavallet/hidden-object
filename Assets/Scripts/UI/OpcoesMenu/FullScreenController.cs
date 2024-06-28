@@ -1,12 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FullScreenController : MonoBehaviour
 {
+    private Toggle toggle;
+
+    public void Start()
+    {
+        toggle = GetComponent<Toggle>();
+        toggle.isOn = GameManager.instance.telaCheia;
+    }
+
     public void Change()
     {
-        Screen.fullScreen = !Screen.fullScreen;
-        print("change screen mode");
+        GameManager.instance.telaCheia = !GameManager.instance.telaCheia;
     }
 }

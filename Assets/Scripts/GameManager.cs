@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEngine.Rendering.DebugUI;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +15,12 @@ public class GameManager : MonoBehaviour
     {
         get => _jogoPausado;
         set => _jogoPausado = value;
+    }
+
+    public bool telaCheia
+    {
+        get => Screen.fullScreen;
+        set => Screen.fullScreen = value;
     }
 
     public float contadorTimerSegundos
